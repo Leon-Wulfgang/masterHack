@@ -11,7 +11,6 @@ Sample Output
 
 
 def get_quartile(arr_int_sorted):
-    #print(arr_int_sorted)
 
     count = len(arr_int_sorted)
 
@@ -23,13 +22,9 @@ def get_quartile(arr_int_sorted):
 
     # odd
     else:
-        #print(int(count / 2-1))
         median = arr_int_sorted[int(count/2)]
-        #print(median)
         first_half = arr_int_sorted[:int(count / 2)]
-        #print(first_half)
         second_half = arr_int_sorted[int(count / 2 + 1):]
-        #print(second_half)
 
     return first_half, second_half, int(median)
 
@@ -44,5 +39,4 @@ first_half, second_half, q2 = get_quartile(inp_sorted)
 _, _, q1 = get_quartile(first_half)
 _, _, q3 = get_quartile(second_half)
 
-#print(first_half, second_half)
 print(q1, q2, q3, sep='\n')
