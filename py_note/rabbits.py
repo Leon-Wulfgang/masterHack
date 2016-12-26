@@ -27,17 +27,35 @@
 # For example, rabbits(10) -> 35. (It is okay if your procedure takes too
 #                                long to run on inputs above 30.)
 
+
 def rabbits(n):
-    pass
+    """
+    if 0 == n:
+        return 0
+    elif 1 == n:
+        return 1
+    elif 2 == n:
+        return 1
+    elif n <= 5:
+        return rabbits(n - 1) + rabbits(n - 2)
+    else:
+        return rabbits(n - 1) + rabbits(n - 2) - rabbits(n - 5)
+    """
+    # when doing rabbits(3 - 5), deduct 0 rabbits
+    # also dealt with month 0: r(0-1) + r(0-2) + r(0-5)
+    if n < 0:
+        return 0
+    elif 1 == n or 2 == n:
+        return 1
+    else:
+        return rabbits(n - 1) + rabbits(n - 2) - rabbits(n - 5)
 
-
-
-#print rabbits(10)
+print(rabbits(0))
 #>>> 35
 
-#s = ""
-#for i in range(1,12):
-#    s = s + str(rabbits(i)) + " "
-#print s
+s = ""
+for i in range(1, 12):
+    s = s + str(rabbits(i)) + " "
+print(s)
 #>>> 1 1 2 3 5 7 11 16 24 35 52
 
