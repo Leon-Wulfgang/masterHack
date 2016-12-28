@@ -5,7 +5,7 @@ def my_for_loop(some_iter):
     # continuously print the .next() element if the __iter__() object
     while True:
         try:
-            print obj_iter.next()
+            print(obj_iter.next())
         # until it raises StopIteration exception at the end of the __iter__() object
         except StopIteration:
             # break out the while seeing the exception at the end

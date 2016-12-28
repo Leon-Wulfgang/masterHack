@@ -26,7 +26,7 @@ modulus_c = MyComplex(abs(c))
 modulus_d = MyComplex(abs(d))
 
 # output formatted complex numbers
-print '\n'.join(map(str,[addition, subtraction, multiplication, division, modulus_c, modulus_d]))
+print('\n'.join(map(str,[addition, subtraction, multiplication, division, modulus_c, modulus_d])))
 
 
 

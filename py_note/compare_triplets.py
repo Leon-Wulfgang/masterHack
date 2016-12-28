@@ -19,4 +19,4 @@ for i in range(0, len(aa)):
     bc += int(aa[i] < bb[i])
 
 #print aa,bb
-print ac,bc
+print(ac,bc)
