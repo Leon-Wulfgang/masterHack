@@ -12,7 +12,7 @@
 def remove_tags(s):
     while '<' in s:
         open = s.find('<')
-        end = s.find('>')
+        end = s.find('>', open) # start after the opening
         left = s[:open]
         right = s[end+1:]
         #print(left, right)
